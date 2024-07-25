@@ -84,7 +84,7 @@ help(mistkit.mystify)
 
 ## Tutorial:
 
-+ [man/misty_bell_states.ipynb](https://github.com/elmbeech/mistkit/blob/main/man/misty_bell_states.ipynb)
+1. [man/misty_bell_states.ipynb](https://github.com/elmbeech/mistkit/blob/main/man/misty_bell_states.ipynb)
 
 
 ## Discussion:
