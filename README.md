@@ -5,7 +5,7 @@
 
 In the book "[Q is for quantum](https://www.qisforquantum.org/)", Terry Rudolph describes a formalism with white balls <span style="white-space: nowrap;">(|0>)</span> and black balls <span style="white-space: nowrap;">(|1>)</span>, termed [misty state](https://youtu.be/vqave0V5qAA), to teach quantum theory and quantum computing to folks with only a basic knowledge of arithmetic.
 
-This formalism was for teaching adapted by others and further developed by Adrian German, Edwin Barnes, Marcelo Pias, Qiao Xiang, Sophia Economou.
+This formalism was for teaching adapted and further developed, amongst others, by Adrian German, Edwin Barnes, Marcelo Pias, Qiao Xiang, and Sophia Economou.
 
 + https://arxiv.org/abs/2005.07874  # Economou, Rudolph, Barnes 2020
 + https://arxiv.org/abs/2210.02868  # Economou, Barnes 2022
@@ -38,12 +38,12 @@ All what **Mistkit** does is adding to Qiskit's state\_drawer function the possi
 pip install -U mistkit
 ```
 
-1. Load mistkit:
+2. Load mistkit:
 ```python
 import mistkit
 ```
 
-1. Run minimal example:
+3. Run minimal example:
 ```python
 # load libraries
 from qiskit import QuantumCircuit
@@ -63,7 +63,7 @@ print(sv.draw('mist'))  # state vector in Terry Rudolph's misty state notation.
 sv.draw('latex')  # state vector in Paul Dirac's ket notation.
 ```
 
-1. Uninstall mistkit:
+4. Uninstall mistkit:
 ```bash
 pip uninstall mistkit
 ```
@@ -84,7 +84,7 @@ help(mistkit.mystify)
 
 ## Tutorial:
 
-+  [man/misty_bell_states.ipynb](https://github.com/elmbeech/mistkit/blob/main/man/misty_bell_states.ipynb)
++ [man/misty_bell_states.ipynb](https://github.com/elmbeech/mistkit/blob/main/man/misty_bell_states.ipynb)
 
 
 ## Discussion:
