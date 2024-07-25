@@ -1,0 +1,88 @@
+#####
+# A hatchling based setup module.
+#
+# See:
+# https://packaging.python.org/en/latest/
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/
+# https://hatch.pypa.io/latest/
+#
+# releasing a next version on pypi:
+# 0. vim mistkit/VERSION.py  # increase version number in file
+# 1. git add mistkit/VERSION.py
+# 2. git status
+# 3. git commit -m'@ mistkit : next release.'
+# 4. git tag -a v0.0.0 -m'version 0.0.0'
+# 5. rm -r dist
+# 6. python3 -m build --sdist  # make source distribution
+# 7. python3 -m build --wheel  # make binary distribution python wheel
+# 8. twine upload dist/* --verbose
+# 9. git push origin
+# 10. git push --tag
+#####
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+# name of the project
+# pip install mistkit
+# import qiskit, mistkit
+name = "mistkit"
+dynamic = ["version"]
+
+description = "mistkit extends the python3 based qiskit quantum computing language state_drawer function with misty state output."
+readme = "README.md"
+
+requires-python = ">=3.8, <4"
+
+license = "Apache 2.0"
+#license-files = {paths = ["LICENSE"]}
+
+authors = [
+  {name="Elmar Bucher", email="epbucher@iu.edu"}
+]
+maintainers = [
+  {name="Elmar Bucher", email="epbucher@iu.edu"}
+]
+
+keywords = [
+    "quantum theory",
+    "quantum computing",
+    "q is for quantum",
+    "misty state",
+    "ibm",
+    "qiskit",
+    "python3",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+    "numpy",
+    "qiskit",
+]
+
+
+[project.urls]
+Hompage = "https://github.com/elmbeech/mistkit"
+Documentation = "https://github.com/elmbeech/mistkit/blob/main/README.md"
+Issues = "https://github.com/elmbeech/mistkit/issues"
+Source = "https://github.com/elmbeech/mistkit"
+#DOI = "https://"
+
+
+[tool.hatch.version]
+path = "pcdl/VERSION.py"
+
+
+[tool.hatch.build.targets.sdist]
+include = ["*"]
+exclude = []
