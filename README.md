@@ -3,31 +3,30 @@
 
 ## Abstract:
 
-In the book "Q is for quantum" Terry Rudolph describes a formalismen with white balls (|0>) and black balls (|1>), termend [misty state](https://youtu.be/vqave0V5qAA) to teach quantum computing  and quantum theory to folks with only a basic knowledge of arithmetic.
-The formalismen was for teaching adapted and further developed by Sophia Economou, Edwin Barnes, Adrian German, Marcelo Pias, and Qiao Xiang.
+In the book "[Q is for quantum](https://www.qisforquantum.org/)", Terry Rudolph describes a formalism with white balls <span style="white-space: nowrap;">(|0>)</span> and black balls <span style="white-space: nowrap;">(|1>)</span>, termed [misty state](https://youtu.be/vqave0V5qAA), to teach quantum theory and quantum computing to folks with only a basic knowledge of arithmetic.
 
-+ https://www.qisforquantum.org/
+This formalism was for teaching adapted by others and further developed by Adrian German, Edwin Barnes, Marcelo Pias, Qiao Xiang, Sophia Economou.
+
 + https://arxiv.org/abs/2005.07874  # Economou, Rudolph, Barnes 2020
 + https://arxiv.org/abs/2210.02868  # Economou, Barnes 2022
 + https://dl.acm.org/doi/10.1145/3626253.3633435  # German, Pias, Xiang 2024
 
-Industrial Busines Machine developed a popular, Python based, open source software stack for quantum computing; qiskit.
+For quantum computing, International Business Machines developed [Qiskit](https://en.wikipedia.org/wiki/Qiskit), a popular, [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) based, free and open-source software stack.
 
-+ https://en.wikipedia.org/wiki/Qiskit
 + https://docs.quantum.ibm.com/
 + https://github.com/Qiskit/qiskit
 + https://www.ibm.com/quantum/qiskit
 
-Mistkit adds to the Qikit's state\_drawer function the possibility to output Statevectors in misty state formalism, along all it's other possibility to output Statevectors (text, latex, latex\_source, qsphere, hinton, bloch, city, paulivec).
+All what **Mistkit** does is adding to Qiskit's state\_drawer function the possibility to output Statevectors in *misty state* formalism, alongside the already available Statevectors output formats (*text*, *latex*, *latex\_source*, *qsphere*, *hinton*, *bloch*, *city*, *paulivec*).
 
 
 ## Header:
-+ Language: python [>= 3.8](https://devguide.python.org/versions/)              
-+ Library dependencies: numpy, qiskit
-+ Date: 2024-07  
-+ License: [Apache 2.0](https://en.wikipedia.org/wiki/Apache_License)           
++ Language: python [>= 3.8](https://devguide.python.org/versions/)
++ Library dependencies: [numpy](https://en.wikipedia.org/wiki/NumPy), qiskit
++ Date: 2024-07
++ License: [Apache 2.0](https://en.wikipedia.org/wiki/Apache_License)
 + Author: Elmar Bucher
-+ User manual: this README.md file                                              
++ User manual: this README.md file
 + Source code: [https://github.com/elmbeech/mistkit](https://github.com/elmbeech/mistkit)
 + Inspiration: Dan Adrian German's CSCI A590 quantum computing class at [Indiana University](https://www.iu.edu/index.html).
 
@@ -79,20 +78,22 @@ from qiskit import visualization
 
 help(mistkit.state_to_mist)
 help(visualization.state_visualization.state_drawer)
-help(mistkit.mistify)
+help(mistkit.mystify)
 ```
 
 
 ## Tutorial:
 
-+  [man/misty_bell_states.ipynb](https://github.com/elmbeech/mistkit/man/misty_bell_states.ipynb)
++  [man/misty_bell_states.ipynb](https://github.com/elmbeech/mistkit/blob/main/man/misty_bell_states.ipynb)
 
 
 ## Discussion:
+
 To be developed.
 
 
-## About Documentation:                                                         
+## About Documentation:
+
 Within the mistkit library, we tried to stick to the documentation policy laid out by Daniele Procida in his "[what nobody tells you about documentation](https://www.youtube.com/watch?v=azf6yzuJt54)" talk at PyCon 2017 in Portland, Oregon.
 
 

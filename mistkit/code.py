@@ -5,32 +5,32 @@
 # library: qiskit 1.1.1
 # license: apache version 2.0
 # date: 2024-06
-# author original state_drawer: ibm and its contributors
-# author modification and state_to_mist: elmar bucher
+# author original state_drawer function: ibm and its contributors
+# author modification, state_to_mist, and mystify: elmar bucher
 #
 # run:
 #     import qiskit
 #     import mistkit
-#     miskit.mistify()
+#     miskit.mystify()
 #
 # description:
-#     dhasflaks
+#     mistkit extends the python3 based qiskit quantum computing language
+#     state_drawer function with a misty state output possibility.
 ########
 
 
 # library
-#from colorama import Fore
 import numpy as np
 import qiskit
 
-# to overwrite state_drawer
+# to overwrite the original state_drawer implementation
 from qiskit import visualization
 from qiskit import user_config
 from qiskit.utils import optionals as _optionals
 from qiskit.visualization.state_visualization import TextMatrix, state_to_latex, plot_state_qsphere, plot_state_hinton, plot_bloch_multivector, plot_state_city, plot_state_paulivec
 
 # constant: number of decimal places to round the coefficient to.
-i_round = 9  # number of decimal places to round the coefficient to.
+i_round = 9
 
 # constant: misty bit unicode characters
 lls_word = [
@@ -51,14 +51,23 @@ lls_word = [
 # functions
 def state_to_mist(state):
     """
-    input: state
+    input: Statevector
+        qiskit statevector opject.
 
     output: string
+        misty state unicode string.
 
     run:
+        import mistkit
+        from qiskit import QuantumCircuit
+        from qiskit.quantum_info import Statevector
+        qc = QuantumCircuit(3)
+        sv = Statevector.from_instruction(qc)
+        mistkit.state_to_mist(sv)
 
     description:
-        here the magic happens.
+        here the magic happens. here the state vector numpy array
+        is translated into misty state syntax.
     """
     # prepare output string
     s_mist = '{'
@@ -84,7 +93,7 @@ def state_to_mist(state):
             # get coefficient
             s_value = str(c_value).replace('(','').replace(')','')
 
-            # get signe
+            # get sign
             if (s_value[0] != '-'):
                 s_value = '+' + s_value
 
@@ -195,17 +204,22 @@ def state_drawer(state, output=None, **drawer_args):
         ) from err
 
 
-def mistify():
+def mystify():
     """
-    input: nop
-    output:  overwritten function
+    input:
+        nop
+
+    output:
+        in RAM overwritten
+        qiskit.visualization.state_visualization.state_drawer function.
+
     run:
+        import mistkit
+        miskit.mystify()
+
     description:
         add output 'mist' to the state_drawer function.
-        overwrite qiskit.visualization.state_visualization.state_drawer function.
-
     """
-    print(f'mistify loaded qiskit verion {qiskit.__version__} ...')
+    print(f'mystify the RAM loaded qiskit version {qiskit.__version__} ...')
     visualization.state_visualization.state_drawer = state_drawer
     print(f'ok!')
-

@@ -33,7 +33,7 @@ build-backend = "hatchling.build"
 name = "mistkit"
 dynamic = ["version"]
 
-description = "mistkit extends the python3 based qiskit quantum computing language state_drawer function with misty state output."
+description = "mistkit extends the python3 based qiskit quantum computing language state_drawer function with a misty state output possibility."
 readme = "README.md"
 
 requires-python = ">=3.8, <4"
