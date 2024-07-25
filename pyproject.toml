@@ -10,7 +10,7 @@
 # 0. vim mistkit/VERSION.py  # increase version number in file
 # 1. git add mistkit/VERSION.py
 # 2. git status
-# 3. git commit -m'@ mistkit : next release.'
+# 3. git commit -m'@ mistkit : next release v0.0.0!'
 # 4. git tag -a v0.0.0 -m'version 0.0.0'
 # 5. rm -r dist
 # 6. python3 -m build --sdist  # make source distribution
@@ -38,7 +38,7 @@ readme = "README.md"
 
 requires-python = ">=3.8, <4"
 
-license = "Apache 2.0"
+license = "Apache-2.0"
 #license-files = {paths = ["LICENSE"]}
 
 authors = [
@@ -80,7 +80,7 @@ Source = "https://github.com/elmbeech/mistkit"
 
 
 [tool.hatch.version]
-path = "pcdl/VERSION.py"
+path = "mistkit/VERSION.py"
 
 
 [tool.hatch.build.targets.sdist]

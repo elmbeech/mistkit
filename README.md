@@ -1,4 +1,4 @@
-# Mistkit &#x25BE;&#x25B4;&#x2726;&#x25C7; &#x25AE;&#x25AD;&#x25A0;&#x25CF;
+# Mistkit {&#x25BE;&#x25B4;&#x2726;&#x25C7;&#x25AE;&#x25AD;&#x25A0;&#x25CF;}
 
 
 ## Abstract:
@@ -45,7 +45,7 @@ import mistkit
 ```
 
 1. Run minimal example:
-```
+```python
 # load libraries
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Statevector
