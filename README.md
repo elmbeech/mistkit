@@ -107,6 +107,7 @@ Within the mistkit library, we tried to stick to the documentation policy laid o
 
 ## Release Note:
 
++ version 0.1.1 ok implementation.
 + version 0.0.0 miskit rises from the ashes.
 
 All we know is falling.
