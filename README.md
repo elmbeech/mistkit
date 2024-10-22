@@ -98,7 +98,16 @@ Within the mistkit library, we tried to stick to the documentation policy laid o
 
 
 ## Cite:
-+ ~
+```bibtex
+@Misc{bucher2023,
+  author    = {Bucher, Elmar and },
+  title     = {elmbeech/mistkit: python3 based qiskit quantum computing language state_drawer function misty state output extension.},
+  year      = {2024},
+  copyright = {Open Access},
+  doi       = {10.5281/zenodo.13972868}
+  publisher = {Zenodo},
+}
+```
 
 
 ## Road Map:
